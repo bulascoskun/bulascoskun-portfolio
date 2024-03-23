@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-background: #202731;
+
+  --white: #ffffff;
+
+  --blue: #3c31dd;
+  --red: #dd3f31;
+  --pink: #ff0066;
+  --dark: #0f0f10;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--body-background);
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
