@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --body-background: #202731;
+  --body-background: #151a20;
 
   --white: #ffffff;
 
@@ -14,16 +14,8 @@
 }
 
 body {
-  color: var(--white);
   background-color: var(--body-background);
-  overflow-x: hidden;
-}
+  color: var(--white);
 
-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 400px;
-  padding: 100px 20vw;
+  height: 300dvh;
 }
