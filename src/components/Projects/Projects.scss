@@ -1,4 +1,4 @@
-.custom-shape-divider-top-1711817464 {
+.custom-shape-divider-top-1711818163 {
   position: absolute;
   top: 0;
   left: 0;
@@ -7,18 +7,14 @@
   line-height: 0;
 }
 
-.custom-shape-divider-top-1711817464 svg {
+.custom-shape-divider-top-1711818163 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 214px;
+  height: 150px;
 }
 
-.custom-shape-divider-top-1711817464 .shape-fill {
-  fill: #151a20;
-}
-
-.custom-shape-divider-bottom-1711817923 {
+.custom-shape-divider-bottom-1711818148 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,13 +24,35 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1711817923 svg {
+.custom-shape-divider-bottom-1711818148 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 214px;
+  height: 150px;
 }
 
-.custom-shape-divider-bottom-1711817923 .shape-fill {
+.shape-fill {
   fill: #151a20;
+}
+
+.shape-fill-1 {
+  fill: #0066ff;
+}
+
+.shape-fill-2 {
+  fill: #6e1869;
+}
+
+.projects-container {
+  background-image: linear-gradient(to top, #212831, #04061a);
+}
+
+.stars2 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  background-image: url('stars-2.png');
+  background-size: cover;
+  background-repeat: repeat;
 }

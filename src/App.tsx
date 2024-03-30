@@ -12,6 +12,7 @@ const App = () => {
       <AboutMe />
       <TechStack />
       <Projects />
+      <div className="h-[1000px]"></div>
     </main>
   );
 };
