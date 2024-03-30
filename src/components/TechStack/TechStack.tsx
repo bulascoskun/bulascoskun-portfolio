@@ -1,5 +1,5 @@
-import layeredWave1 from '../assets/images/curves/layered-wave-1.svg';
-import layeredWave2 from '../assets/images/curves/layered-wave-2.svg';
+import layeredWave1 from '../../assets/images/curves/layered-wave-1.svg';
+import layeredWave2 from '../../assets/images/curves/layered-wave-2.svg';
 import TechStackCarousel from './TechStackCarousel';
 
 const TechStack = () => {

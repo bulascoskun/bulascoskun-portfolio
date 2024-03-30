@@ -1,7 +1,8 @@
 import AboutMe from './components/AboutMe';
 import Navbar from './components/Navbar';
 import Parallax from './components/Parallax/Parallax';
-import TechStack from './components/TechStack';
+import Projects from './components/Projects/Projects';
+import TechStack from './components/TechStack/TechStack';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Parallax />
       <AboutMe />
       <TechStack />
+      <Projects />
     </main>
   );
 };

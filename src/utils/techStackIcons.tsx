@@ -16,6 +16,9 @@ import {
 } from 'react-icons/si';
 
 const techStackIcons = [
+  <SiHtml5 className="text-6xl" title="HTML" />,
+  <SiCss3 className="text-6xl" title="CSS" />,
+  <SiJavascript className="text-6xl" title="JavaScript" />,
   <SiReact className="text-6xl" title="React" />,
   <SiNodedotjs className="text-6xl" title="Node.js" />,
   <SiTypescript className="text-6xl" title="TypeScript" />,
@@ -27,9 +30,6 @@ const techStackIcons = [
   <SiGit className="text-6xl" title="MongoDB" />,
   <SiPostman className="text-6xl" title="Postman" />,
   <SiTailwindcss className="text-6xl" title="Tailwind" />,
-  <SiJavascript className="text-6xl" title="JavaScript" />,
-  <SiCss3 className="text-6xl" title="CSS" />,
-  <SiHtml5 className="text-6xl" title="HTML" />,
 ];
 
 export default techStackIcons;
