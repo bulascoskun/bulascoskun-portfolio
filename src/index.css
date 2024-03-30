@@ -13,9 +13,11 @@
   --dark: #0f0f10;
 }
 
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
 body {
   background-color: var(--body-background);
   color: var(--white);
-
-  height: 300dvh;
 }

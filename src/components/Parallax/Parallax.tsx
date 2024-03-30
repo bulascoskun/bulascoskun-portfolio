@@ -1,8 +1,8 @@
-import './Parallax.scss';
-import rocket from '../../assets/images/rocket.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import './Parallax.scss';
+import rocket from '../../assets/images/other/rocket.png';
 import ShapeDivider from './ShapeDivider';
 
 const links = ['Home', 'About Me', 'Projects', 'Contact'];
@@ -49,7 +49,7 @@ const Parallax = () => {
   const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-450%']);
 
   return (
-    <div className="parallax" ref={ref}>
+    <section className="parallax" ref={ref}>
       <motion.div className="stars2" style={{ y: yStars2 }}></motion.div>
       <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
       <motion.img
@@ -65,7 +65,10 @@ const Parallax = () => {
         initial="initial"
         animate="animate"
       >
-        <motion.h1 variants={textVariants} className="font-bold text-7xl ">
+        <motion.h1
+          variants={textVariants}
+          className="font-bold text-7xl text-gray-200"
+        >
           Barış Ulaş Coşkun
         </motion.h1>
         <motion.h3
@@ -104,7 +107,7 @@ const Parallax = () => {
         </motion.ul>
       </motion.div>
       <ShapeDivider />
-    </div>
+    </section>
   );
 };
 export default Parallax;

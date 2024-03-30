@@ -1,8 +1,4 @@
 const Navbar = () => {
-  return (
-    <div></div>
-
-    // <div className="fixed z-50 border-[50px] w-full h-dvh border-white "></div>
-  );
+  return <div></div>;
 };
 export default Navbar;
