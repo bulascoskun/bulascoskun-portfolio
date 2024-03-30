@@ -3,6 +3,7 @@ import rocket from '../../assets/images/rocket.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import ShapeDivider from './ShapeDivider';
 
 const links = ['Home', 'About Me', 'Projects', 'Contact'];
 
@@ -43,15 +44,12 @@ const Parallax = () => {
     offset: ['start start', 'end start'],
   });
 
-  const yStars1 = useTransform(scrollYProgress, [0, 1], ['-20%', '-30%']);
   const yStars2 = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-
   const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-250%']);
   const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-450%']);
 
   return (
     <div className="parallax" ref={ref}>
-      <motion.div className="stars1" style={{ y: yStars1 }}></motion.div>
       <motion.div className="stars2" style={{ y: yStars2 }}></motion.div>
       <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
       <motion.img
@@ -76,10 +74,7 @@ const Parallax = () => {
         >
           Web developer
         </motion.h3>
-        <motion.ul
-          variants={textVariants}
-          className="flex gap-4 text-gray-300 transition"
-        >
+        <motion.ul variants={textVariants} className="flex gap-4 text-gray-300">
           {links.map((link) => {
             return (
               <motion.li
@@ -92,10 +87,7 @@ const Parallax = () => {
             );
           })}
         </motion.ul>
-        <motion.ul
-          variants={textVariants}
-          className="flex gap-4 text-gray-300 transition"
-        >
+        <motion.ul variants={textVariants} className="flex gap-4 text-gray-300">
           {socials.map((social) => {
             return (
               <motion.a
@@ -111,6 +103,7 @@ const Parallax = () => {
           })}
         </motion.ul>
       </motion.div>
+      <ShapeDivider />
     </div>
   );
 };
