@@ -35,7 +35,7 @@ const AboutMe = () => {
         whileInView="whileInView"
         className="flex items-center font-[100] gap-4 w-[50%] ml-auto mt-16"
       >
-        <p className="text-end">
+        <p className="text-end text-stone-500">
           I focus on latest technologies in web development
         </p>
         <div className="border-b border-stone-500 w-full" />
