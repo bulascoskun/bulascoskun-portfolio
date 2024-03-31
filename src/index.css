@@ -12,6 +12,16 @@
   src: url(/public/ASTRONAU.TTF);
 }
 
+@layer components {
+  .font-bmspace {
+    font-family: BMSpace, sans-serif;
+  }
+
+  .font-astronaut {
+    font-family: Astronaut, sans-serif;
+  }
+}
+
 :root {
   --body-background: #151a20;
 
@@ -27,11 +37,14 @@
   font-family: BMSpace, sans-serif;
 }
 
-/* * {
-  font-family: BMSpace, sans-serif;
-} */
-
 body {
   background-color: var(--body-background);
   color: var(--white);
+}
+
+.asteroid {
+  position: relative;
+  background-color: var(--body-background);
+  z-index: 15;
+  padding-top: 64px;
 }

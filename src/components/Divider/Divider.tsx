@@ -2,10 +2,13 @@ import './Divider.scss';
 import astronaut from '../../assets/images/other/astronaut.png';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Divider = () => {
+  const [isVisible, setIsVisible] = useState(true);
+
   return (
-    <section className="divider-container relative bg-white overflow-hidden  h-[500px] ">
+    <section className="divider-container relative bg-white overflow-hidden h-[500px] ">
       {/* TOP DIVIDER */}
       <div className="custom-shape-divider-top-1711818163 z-10">
         <svg
@@ -34,20 +37,26 @@ const Divider = () => {
       {/* BACKGROUND */}
       <div className="stars2" />
 
-      <motion.img
-        viewport={{ once: true }}
-        initial={{ y: 50, rotate: -30, x: 0 }}
-        whileInView={{
-          y: -200,
-          rotate: -90,
-          x: -2800,
-          transition: {
-            duration: 5,
-          },
-        }}
-        src={astronaut}
-        className="w-40 absolute right-0 top-1/2"
-      />
+      {isVisible && (
+        <motion.img
+          viewport={{ once: true }}
+          initial={{ y: 50, rotate: -30, x: 0 }}
+          whileInView={{
+            y: -200,
+            rotate: -90,
+            x: -2800,
+            transition: {
+              duration: 5,
+            },
+          }}
+          exit={{ opacity: 0 }}
+          src={astronaut}
+          className="w-40 absolute right-0 top-1/2"
+          onAnimationComplete={() => {
+            setIsVisible(false);
+          }}
+        />
+      )}
 
       {/* BOTTOM DIVIDER */}
       <div className="custom-shape-divider-bottom-1711818148 z-10">

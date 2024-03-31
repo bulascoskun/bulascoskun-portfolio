@@ -28,7 +28,7 @@ const fromRight = {
 
 const AboutMe = () => {
   return (
-    <section className="overflow-hidden bg-[var(--body-background)] z-[15] relative">
+    <section className="overflow-hidden asteroid">
       <SectionTitle title="ABOUT ME" />
       <div className="p-16 flex flex-col gap-8">
         <div className="flex items-center gap-16 container mx-auto">
