@@ -5,22 +5,13 @@
   overflow: hidden;
   background-image: linear-gradient(to top, #212831, #04061a);
 
-  .stars2 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
-    background-image: url('stars-2.png');
-    background-size: contain;
-    background-repeat: repeat;
-  }
-
   .planets {
     position: absolute;
     height: 25%;
     width: 100%;
     top: 50%;
     left: 40%;
+    z-index: 20;
 
     background-image: url('planets.png');
     background-size: contain;
@@ -29,7 +20,7 @@
 
   .rocket {
     position: absolute;
-    z-index: 5;
+    z-index: 20;
     right: 0;
 
     width: 500px;

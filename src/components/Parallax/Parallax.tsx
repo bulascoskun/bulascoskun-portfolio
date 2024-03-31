@@ -44,13 +44,11 @@ const Parallax = () => {
     offset: ['start start', 'end start'],
   });
 
-  const yStars2 = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-250%']);
   const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-450%']);
 
   return (
     <section className="parallax" ref={ref}>
-      <motion.div className="stars2" style={{ y: yStars2 }}></motion.div>
       <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
       <motion.img
         className="rocket"
@@ -60,7 +58,7 @@ const Parallax = () => {
       />
 
       <motion.div
-        className="absolute top-[40%] ml-16 p-8 bg-[#0000008e] flex flex-col gap-4"
+        className="absolute top-[30%] ml-16 p-8 bg-[#0000008e] flex flex-col gap-4 z-[25]"
         variants={textVariants}
         initial="initial"
         animate="animate"

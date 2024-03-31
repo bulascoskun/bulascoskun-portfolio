@@ -1,5 +1,6 @@
 import ulas from '../assets/images/other/ulas-outline.png';
 import { motion } from 'framer-motion';
+import SectionTitle from './SectionTitle';
 
 const fromLeft = {
   initial: { x: -500, opacity: 0 },
@@ -27,30 +28,8 @@ const fromRight = {
 
 const AboutMe = () => {
   return (
-    <section className="overflow-hidden">
-      <div className="flex flex-row items-center justify-between mt-16">
-        <motion.h2
-          viewport={{ once: true }}
-          variants={fromLeft}
-          initial="initial"
-          whileInView="whileInView"
-          className="font-thin text-5xl text-stone-200 container text-center"
-        >
-          ABOUT ME
-        </motion.h2>
-        <motion.div
-          viewport={{ once: true }}
-          variants={fromRight}
-          initial="initial"
-          whileInView="whileInView"
-          className="flex items-center font-thin gap-4 w-full"
-        >
-          <p className="text-end text-stone-500">
-            I focus on latest technologies in web development
-          </p>
-          <div className="border-b border-stone-500 w-full" />
-        </motion.div>
-      </div>
+    <section className="overflow-hidden bg-[var(--body-background)] z-[15] relative">
+      <SectionTitle title="ABOUT ME" />
       <div className="p-16 flex flex-col gap-8">
         <div className="flex items-center gap-16 container mx-auto">
           <motion.img

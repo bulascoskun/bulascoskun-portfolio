@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Divider = () => {
   return (
-    <section className="divider-container relative bg-white mt-8 overflow-hidden  h-[500px] ">
+    <section className="divider-container relative bg-white overflow-hidden  h-[500px] ">
       {/* TOP DIVIDER */}
       <div className="custom-shape-divider-top-1711818163 z-10">
         <svg
