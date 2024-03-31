@@ -1,16 +1,13 @@
-import './Divider.scss';
-import astronaut from '../../assets/images/other/astronaut.png';
-
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-const Divider = () => {
-  const [isVisible, setIsVisible] = useState(true);
+import alien from '../../assets/images/other/alien.png';
+import './Divider2.scss';
 
+const Divider2 = () => {
   return (
     <section className="divider-container relative bg-white overflow-hidden h-[500px]">
       {/* TOP DIVIDER */}
-      <div className="custom-shape-divider-top-1711818163 z-[15]">
+      <div className="custom-shape-divider-top-1711911017 z-[15]">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,30 +31,21 @@ const Divider = () => {
         </svg>
       </div>
 
-      {/* ASTRONAUT */}
-      {isVisible && (
-        <motion.img
-          viewport={{ once: true }}
-          initial={{ y: 50, rotate: -30, x: 0 }}
-          whileInView={{
-            y: -200,
-            rotate: -90,
-            x: -2800,
-            transition: {
-              duration: 5,
-            },
-          }}
-          exit={{ opacity: 0 }}
-          src={astronaut}
-          className="w-40 absolute right-0 top-1/2 z-10"
-          onAnimationComplete={() => {
-            setIsVisible(false);
-          }}
-        />
-      )}
+      <motion.img
+        initial={{ y: '-50%', x: '-50%' }}
+        animate={{ y: '-30%' }}
+        transition={{
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: 'easeInOut',
+          duration: 2.3,
+        }}
+        src={alien}
+        className="w-[800px] absolute top-1/2 left-1/2 z-10"
+      />
 
       {/* BOTTOM DIVIDER */}
-      <div className="custom-shape-divider-bottom-1711818148 z-[15]">
+      <div className="custom-shape-divider-bottom-1711911221 z-[15]">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -83,4 +71,4 @@ const Divider = () => {
     </section>
   );
 };
-export default Divider;
+export default Divider2;

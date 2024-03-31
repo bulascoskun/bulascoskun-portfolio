@@ -12,7 +12,7 @@ const projectsList = [
     img: [skillwise1, skillwise2],
     desc: [
       'SkillWise.com is a full-stack web application for students of all ages where users can both purchase books and subscribe to courses, resembling a combination of e-commerce and Udemy.',
-      'SkillWise.com offers features including user registra�on and login, shopping cart func�onality, subscrip�on to courses, and order placement.',
+      'SkillWise.com offers features including user registration and login, shopping cart functionality, subscription to courses, and order placement.',
       'Developed using React, Tailwind CSS, Node.js, Express.js, and MongoDB.',
       'Also used popular libraries like React Router for routing and Redux Toolkit for state management.',
     ],
@@ -35,7 +35,7 @@ const projectsList = [
     title: 'Scrap Hero',
     img: [scraphero1, scraphero2],
     desc: [
-      'Scrap Hero is a website designed to provide users with informa�on about scrap metal prices. It is a sta�c website where users can learn about the current prices of various types of scrap metal.',
+      'Scrap Hero is a website designed to provide users with informa�on about scrap metal prices. It is a static website where users can learn about the current prices of various types of scrap metal.',
       'Developed using React and Styled Components as CSS framework.',
     ],
     live: 'https://scraphero.netlify.app/',
