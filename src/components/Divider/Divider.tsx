@@ -1,22 +1,11 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import './Projects.scss';
-import { useRef } from 'react';
+import './Divider.scss';
+import astronaut from '../../assets/images/other/astronaut.png';
 
-const Projects = () => {
-  const ref = useRef() as any;
+import { motion } from 'framer-motion';
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  });
-
-  const yStars = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-
+const Divider = () => {
   return (
-    <section
-      ref={ref}
-      className="projects-container relative bg-white h-dvh mt-8 overflow-hidden"
-    >
+    <section className="divider-container relative bg-white mt-8 overflow-hidden  h-[500px] ">
       {/* TOP DIVIDER */}
       <div className="custom-shape-divider-top-1711818163 z-10">
         <svg
@@ -43,7 +32,22 @@ const Projects = () => {
       </div>
 
       {/* BACKGROUND */}
-      <motion.div className="stars2" style={{ y: yStars }}></motion.div>
+      <div className="stars2" />
+
+      <motion.img
+        viewport={{ once: true }}
+        initial={{ y: 50, rotate: -30, x: 0 }}
+        whileInView={{
+          y: -200,
+          rotate: -90,
+          x: -2800,
+          transition: {
+            duration: 5,
+          },
+        }}
+        src={astronaut}
+        className="w-40 absolute right-0 top-1/2"
+      />
 
       {/* BOTTOM DIVIDER */}
       <div className="custom-shape-divider-bottom-1711818148 z-10">
@@ -72,4 +76,4 @@ const Projects = () => {
     </section>
   );
 };
-export default Projects;
+export default Divider;

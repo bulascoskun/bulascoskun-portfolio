@@ -1,7 +1,7 @@
 import AboutMe from './components/AboutMe';
 import Navbar from './components/Navbar';
 import Parallax from './components/Parallax/Parallax';
-import Projects from './components/Projects/Projects';
+import Projects from './components/Divider/Divider';
 import TechStack from './components/TechStack/TechStack';
 
 const App = () => {
@@ -12,7 +12,6 @@ const App = () => {
       <AboutMe />
       <TechStack />
       <Projects />
-      <div className="h-[1000px]"></div>
     </main>
   );
 };

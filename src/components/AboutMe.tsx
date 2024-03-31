@@ -28,28 +28,30 @@ const fromRight = {
 const AboutMe = () => {
   return (
     <section className="overflow-hidden">
-      <motion.div
-        viewport={{ once: true }}
-        variants={fromRight}
-        initial="initial"
-        whileInView="whileInView"
-        className="flex items-center font-[100] gap-4 w-[50%] ml-auto mt-16"
-      >
-        <p className="text-end text-stone-500">
-          I focus on latest technologies in web development
-        </p>
-        <div className="border-b border-stone-500 w-full" />
-      </motion.div>
-      <div className="p-16 flex flex-col gap-8">
+      <div className="flex flex-row items-center justify-between mt-16">
         <motion.h2
           viewport={{ once: true }}
           variants={fromLeft}
           initial="initial"
           whileInView="whileInView"
-          className="font-[100] text-5xl text-stone-200 container mx-auto"
+          className="font-thin text-5xl text-stone-200 container text-center"
         >
           ABOUT ME
         </motion.h2>
+        <motion.div
+          viewport={{ once: true }}
+          variants={fromRight}
+          initial="initial"
+          whileInView="whileInView"
+          className="flex items-center font-thin gap-4 w-full"
+        >
+          <p className="text-end text-stone-500">
+            I focus on latest technologies in web development
+          </p>
+          <div className="border-b border-stone-500 w-full" />
+        </motion.div>
+      </div>
+      <div className="p-16 flex flex-col gap-8">
         <div className="flex items-center gap-16 container mx-auto">
           <motion.img
             viewport={{ once: true }}

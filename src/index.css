@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: BMSpace;
+  src: url(/public/BMSPA___.TTF);
+}
+
+@font-face {
+  font-family: Astronaut;
+  src: url(/public/ASTRONAU.TTF);
+}
+
 :root {
   --body-background: #151a20;
 
@@ -14,8 +24,12 @@
 }
 
 * {
-  font-family: 'DM Sans', sans-serif;
+  font-family: BMSpace, sans-serif;
 }
+
+/* * {
+  font-family: BMSpace, sans-serif;
+} */
 
 body {
   background-color: var(--body-background);

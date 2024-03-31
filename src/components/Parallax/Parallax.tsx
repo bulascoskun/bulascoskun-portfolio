@@ -65,16 +65,10 @@ const Parallax = () => {
         initial="initial"
         animate="animate"
       >
-        <motion.h1
-          variants={textVariants}
-          className="font-bold text-7xl text-gray-200"
-        >
-          Barış Ulaş Coşkun
+        <motion.h1 variants={textVariants} className="text-7xl text-gray-200">
+          BARIS ULAS COSKUN
         </motion.h1>
-        <motion.h3
-          variants={textVariants}
-          className="font-semibold text-4xl text-gray-300"
-        >
+        <motion.h3 variants={textVariants} className="text-4xl text-gray-300">
           Web developer
         </motion.h3>
         <motion.ul variants={textVariants} className="flex gap-4 text-gray-300">
