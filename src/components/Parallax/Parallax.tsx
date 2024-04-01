@@ -2,8 +2,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import './Parallax.scss';
-import rocket from '../../assets/images/other/rocket.png';
 import ShapeDivider from './ShapeDivider';
+import rocket from '../../assets/images/other/rocket.png';
 
 const links = ['Home', 'About Me', 'Projects', 'Contact'];
 
@@ -44,14 +44,14 @@ const Parallax = () => {
     offset: ['start start', 'end start'],
   });
 
-  const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-250%']);
-  const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-450%']);
+  const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-150%']);
+  const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-350%']);
 
   return (
     <section className="parallax" ref={ref}>
       <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
       <motion.img
-        className="rocket"
+        className="rocket select-none"
         src={rocket}
         alt="Space Ship"
         style={{ y: yRocket }}

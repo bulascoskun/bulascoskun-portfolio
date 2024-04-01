@@ -35,7 +35,7 @@ const projectsList = [
     title: 'Scrap Hero',
     img: [scraphero1, scraphero2],
     desc: [
-      'Scrap Hero is a website designed to provide users with informa�on about scrap metal prices. It is a static website where users can learn about the current prices of various types of scrap metal.',
+      'Scrap Hero is a website designed to provide users with information about scrap metal prices. It is a static website where users can learn about the current prices of various types of scrap metal.',
       'Developed using React and Styled Components as CSS framework.',
     ],
     live: 'https://scraphero.netlify.app/',

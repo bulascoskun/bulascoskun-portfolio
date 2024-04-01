@@ -86,22 +86,34 @@ const SingleProject = ({
           className="w-1/2 flex flex-col gap-6 pr-6"
         >
           <h2 className="text-3xl">{title}</h2>
-          <div className="flex flex-col gap-4">
+          <motion.div variants={variants} className="flex flex-col gap-4">
             {desc.map((desc, i) => {
               return (
-                <p key={i} className="font-mono">
+                <motion.p variants={variants} key={i} className="font-mono">
                   {desc}
-                </p>
+                </motion.p>
               );
             })}
-          </div>
+          </motion.div>
           <div className="flex gap-8 ml-auto">
-            <a target="_blank" className="bg-[#191552] py-2 px-4" href={live}>
+            <motion.a
+              initial={{ y: 0 }}
+              whileHover={{ y: -5 }}
+              target="_blank"
+              className="bg-[#191552] py-2 px-4"
+              href={live}
+            >
               Live Site
-            </a>
-            <a target="_blank" className="bg-[#d100a4] py-2 px-4" href={github}>
+            </motion.a>
+            <motion.a
+              initial={{ y: 0 }}
+              whileHover={{ y: -5 }}
+              target="_blank"
+              className="bg-[#d100a4] py-2 px-4"
+              href={github}
+            >
               More on GitHub
-            </a>
+            </motion.a>
           </div>
         </motion.div>
       </div>
@@ -118,22 +130,34 @@ const SingleProject = ({
           className="w-1/2 flex flex-col gap-6 pr-6"
         >
           <h2 className="text-3xl">{title}</h2>
-          <div className="flex flex-col gap-4">
+          <motion.div variants={variants} className="flex flex-col gap-4">
             {desc.map((desc, i) => {
               return (
-                <p key={i} className="font-mono">
+                <motion.p variants={variants} key={i} className="font-mono">
                   {desc}
-                </p>
+                </motion.p>
               );
             })}
-          </div>
+          </motion.div>
           <div className="flex gap-8 ml-auto">
-            <a target="_blank" className="bg-[#191552] py-2 px-4" href={live}>
+            <motion.a
+              initial={{ y: 0 }}
+              whileHover={{ y: -5 }}
+              target="_blank"
+              className="bg-[#d100a4] py-2 px-4"
+              href={live}
+            >
               Live Site
-            </a>
-            <a target="_blank" className="bg-[#d100a4] py-2 px-4" href={github}>
+            </motion.a>
+            <motion.a
+              initial={{ y: 0 }}
+              whileHover={{ y: -5 }}
+              target="_blank"
+              className="bg-[#191552] py-2 px-4"
+              href={github}
+            >
               More on GitHub
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 

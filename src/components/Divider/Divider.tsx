@@ -49,7 +49,7 @@ const Divider = () => {
           }}
           exit={{ opacity: 0 }}
           src={astronaut}
-          className="w-40 absolute right-0 top-1/2 z-10"
+          className="w-40 absolute right-0 top-1/2 z-10 select-none"
           onAnimationComplete={() => {
             setIsVisible(false);
           }}

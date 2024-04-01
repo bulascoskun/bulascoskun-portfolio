@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: BMSpace;
-  src: url(/public/BMSPA___.TTF);
+  src: url(/BMSPA___.TTF);
 }
 
 @font-face {
   font-family: Astronaut;
-  src: url(/public/ASTRONAU.TTF);
+  src: url(/ASTRONAU.TTF);
 }
 
 @layer components {

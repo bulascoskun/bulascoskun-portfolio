@@ -41,7 +41,7 @@ const Divider2 = () => {
           duration: 2.3,
         }}
         src={alien}
-        className="w-[800px] absolute top-1/2 left-1/2 z-10"
+        className="w-[800px] absolute top-1/2 left-1/2 z-10 select-none"
       />
 
       {/* BOTTOM DIVIDER */}

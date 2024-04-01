@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useRef } from 'react';
-import projectsList from '../utils/projectsList';
+import projectsList from '../../utils/projectsList';
 import SingleProject from './SingleProject';
 
 const Projects = () => {
