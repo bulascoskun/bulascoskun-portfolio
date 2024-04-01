@@ -21,7 +21,7 @@ const Projects = () => {
       {/* TITLE */}
       <div className="flex flex-row items-center justify-center w-full sticky top-[1rem] overflow-hidden z-10">
         <h2
-          className="text-8xl text-stone-200 text-center font-astronaut tracking-wider whitespace-nowrap px-8 bg-[var(--body-background)]
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-stone-200 text-center font-astronaut tracking-wider whitespace-nowrap px-8 bg-[var(--body-background)]
     z-10 rounded-lg"
         >
           PROJECTS

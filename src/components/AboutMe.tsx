@@ -30,8 +30,8 @@ const AboutMe = () => {
   return (
     <section className="overflow-hidden asteroid">
       <SectionTitle title="ABOUT ME" />
-      <div className="p-16 flex flex-col gap-8">
-        <div className="flex items-center gap-16 container mx-auto">
+      <div className="xl:p-16 flex gap-8">
+        <div className="flex flex-col xl:flex-row items-center gap-16 py-8 container mx-auto">
           <motion.img
             viewport={{ once: true }}
             variants={fromLeft}
@@ -39,8 +39,7 @@ const AboutMe = () => {
             whileInView="whileInView"
             src={ulas}
             alt="Barış Ulaş Coşkun"
-            // className="w-full h-full"
-            className="aspect-[1152/1352] w-[400px]"
+            className="aspect-[1152/1352] w-[400px] mb-8"
           />
 
           <motion.div
@@ -48,9 +47,9 @@ const AboutMe = () => {
             variants={fromRight}
             initial={{ x: 200, opacity: 0 }}
             whileInView="whileInView"
-            className="flex flex-col gap-4 border border-gray-300 p-8"
+            className="flex flex-col gap-4 border border-gray-300 p-4 xl:p-8"
           >
-            <motion.h3 className="text-4xl text-stone-200">
+            <motion.h3 className=" xl:text-4xl text-stone-200">
               Web developer & Engineer
             </motion.h3>
             <motion.p className="text-stone-700">

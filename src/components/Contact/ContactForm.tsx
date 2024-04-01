@@ -6,7 +6,7 @@ const ContactForm = () => {
       viewport={{ once: true }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1.5, delay: 3.5 }}
+      transition={{ duration: 1.5, delay: 5 }}
       className="flex flex-col gap-8 p-8 h-full"
     >
       <h3 className="text-3xl">Mail Me</h3>

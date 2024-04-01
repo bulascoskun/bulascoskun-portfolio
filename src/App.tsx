@@ -6,6 +6,7 @@ import StarsBackground from './components/StarsBackground/StarsBackground';
 import Projects from './components/Projects/Projects';
 import Divider2 from './components/Divider/Divider2';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Divider/Footer';
 
 const App = () => {
   return (
@@ -16,9 +17,9 @@ const App = () => {
       <TechStack />
       <Divider />
       <Projects />
-      <Divider2 />
-      <Contact />
-      <div className="h-dvh bg-black"></div>
+      {/* <Divider2 /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </main>
   );
 };

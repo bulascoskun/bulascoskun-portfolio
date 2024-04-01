@@ -5,7 +5,7 @@ import './Parallax.scss';
 import ShapeDivider from './ShapeDivider';
 import rocket from '../../assets/images/other/rocket.png';
 
-const links = ['Home', 'About Me', 'Projects', 'Contact'];
+const links = ['About Me', 'Projects', 'Contact'];
 
 const socials = [
   {
@@ -49,33 +49,46 @@ const Parallax = () => {
 
   return (
     <section className="parallax" ref={ref}>
-      <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
+      <motion.div
+        className="planets hidden md:block"
+        style={{ y: yPlanets }}
+      ></motion.div>
+
       <motion.img
-        className="rocket select-none"
+        className="select-none absolute z-[20] bottom-0 sm:w-[500px] sm:right-0"
         src={rocket}
         alt="Space Ship"
         style={{ y: yRocket }}
       />
 
       <motion.div
-        className="absolute top-[30%] ml-16 p-8 bg-[#0000008e] flex flex-col gap-4 z-[25]"
+        className="absolute top-[calc(50%_-_182px)] lg:mx-16 p-8 bg-[#000000de] lg:bg-[#0000008e] flex flex-col gap-4 z-[25]"
         variants={textVariants}
         initial="initial"
         animate="animate"
       >
-        <motion.h1 variants={textVariants} className="text-7xl text-gray-200">
+        <motion.h1
+          variants={textVariants}
+          className="text-4xl lg:text-7xl text-gray-200"
+        >
           BARIS ULAS COSKUN
         </motion.h1>
-        <motion.h3 variants={textVariants} className="text-4xl text-gray-300">
+        <motion.h3
+          variants={textVariants}
+          className="text-2xl lg:text-4xl text-gray-300"
+        >
           Web developer
         </motion.h3>
-        <motion.ul variants={textVariants} className="flex gap-4 text-gray-300">
+        <motion.ul
+          variants={textVariants}
+          className="flex flex-col md:flex-row gap-4 text-gray-300"
+        >
           {links.map((link) => {
             return (
               <motion.li
                 variants={textVariants}
                 key={link}
-                className="hover:text-gray-200"
+                className="hover:text-gray-200 whitespace-nowrap"
               >
                 {link}
               </motion.li>
@@ -98,6 +111,7 @@ const Parallax = () => {
           })}
         </motion.ul>
       </motion.div>
+
       <ShapeDivider />
     </section>
   );
