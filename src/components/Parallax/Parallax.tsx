@@ -2,10 +2,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import './Parallax.scss';
-import rocket from '../../assets/images/other/rocket.png';
 import ShapeDivider from './ShapeDivider';
+import rocket from '../../assets/images/other/rocket.png';
+import planets from '../../assets/images/other/planets.png';
 
-const links = ['Home', 'About Me', 'Projects', 'Contact'];
+const links = ['About Me', 'Projects', 'Contact'];
 
 const socials = [
   {
@@ -44,46 +45,53 @@ const Parallax = () => {
     offset: ['start start', 'end start'],
   });
 
-  const yStars2 = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-  const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-250%']);
-  const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-450%']);
+  const yPlanets = useTransform(scrollYProgress, [0, 1], ['0%', '-150%']);
+  const yRocket = useTransform(scrollYProgress, [0, 1], ['60%', '-350%']);
 
   return (
     <section className="parallax" ref={ref}>
-      <motion.div className="stars2" style={{ y: yStars2 }}></motion.div>
-      <motion.div className="planets" style={{ y: yPlanets }}></motion.div>
       <motion.img
-        className="rocket"
+        src={planets}
+        style={{ x: '-50%', y: yPlanets }}
+        className="hidden md:block absolute h-[190px] aspect-[289/180]  z-20 object-contain
+        top-1/2 left-1/2"
+      />
+
+      <motion.img
+        className="select-none absolute z-[20] bottom-0 sm:w-[500px] sm:right-0"
         src={rocket}
         alt="Space Ship"
         style={{ y: yRocket }}
       />
 
       <motion.div
-        className="absolute top-[40%] ml-16 p-8 bg-[#0000008e] flex flex-col gap-4"
+        className="absolute top-[calc(50%_-_182px)] lg:mx-16 p-8 bg-[#000000de] lg:bg-[#0000008e] flex flex-col gap-4 z-[25]"
         variants={textVariants}
         initial="initial"
         animate="animate"
       >
         <motion.h1
           variants={textVariants}
-          className="font-bold text-7xl text-gray-200"
+          className="text-4xl lg:text-7xl text-gray-200"
         >
-          Barış Ulaş Coşkun
+          BARIS ULAS COSKUN
         </motion.h1>
         <motion.h3
           variants={textVariants}
-          className="font-semibold text-4xl text-gray-300"
+          className="text-2xl lg:text-4xl text-gray-300"
         >
           Web developer
         </motion.h3>
-        <motion.ul variants={textVariants} className="flex gap-4 text-gray-300">
+        <motion.ul
+          variants={textVariants}
+          className="flex flex-col md:flex-row gap-4 text-gray-300"
+        >
           {links.map((link) => {
             return (
               <motion.li
                 variants={textVariants}
                 key={link}
-                className="hover:text-gray-200"
+                className="hover:text-gray-200 whitespace-nowrap"
               >
                 {link}
               </motion.li>
@@ -106,6 +114,7 @@ const Parallax = () => {
           })}
         </motion.ul>
       </motion.div>
+
       <ShapeDivider />
     </section>
   );

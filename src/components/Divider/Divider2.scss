@@ -1,0 +1,34 @@
+.custom-shape-divider-top-1711911017 {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 14;
+}
+
+.custom-shape-divider-top-1711911017 svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 254px;
+}
+
+.custom-shape-divider-bottom-1711911221 {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 12;
+}
+
+.custom-shape-divider-bottom-1711911221 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 117px;
+}

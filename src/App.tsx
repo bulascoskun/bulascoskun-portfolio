@@ -1,17 +1,25 @@
 import AboutMe from './components/AboutMe';
-import Navbar from './components/Navbar';
 import Parallax from './components/Parallax/Parallax';
-import Projects from './components/Projects/Projects';
+import Divider from './components/Divider/Divider';
 import TechStack from './components/TechStack/TechStack';
+import StarsBackground from './components/StarsBackground/StarsBackground';
+import Projects from './components/Projects/Projects';
+import Divider2 from './components/Divider/Divider2';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Divider/Footer';
 
 const App = () => {
   return (
     <main>
-      <Navbar />
+      <StarsBackground />
       <Parallax />
       <AboutMe />
       <TechStack />
+      <Divider />
       <Projects />
+      <Divider2 />
+      <Contact />
+      <Footer />
     </main>
   );
 };

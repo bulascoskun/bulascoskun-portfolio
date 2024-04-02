@@ -1,5 +1,6 @@
 import ulas from '../assets/images/other/ulas-outline.png';
 import { motion } from 'framer-motion';
+import SectionTitle from './SectionTitle';
 
 const fromLeft = {
   initial: { x: -500, opacity: 0 },
@@ -27,30 +28,10 @@ const fromRight = {
 
 const AboutMe = () => {
   return (
-    <section className="overflow-hidden">
-      <motion.div
-        viewport={{ once: true }}
-        variants={fromRight}
-        initial="initial"
-        whileInView="whileInView"
-        className="flex items-center font-[100] gap-4 w-[50%] ml-auto mt-16"
-      >
-        <p className="text-end text-stone-500">
-          I focus on latest technologies in web development
-        </p>
-        <div className="border-b border-stone-500 w-full" />
-      </motion.div>
-      <div className="p-16 flex flex-col gap-8">
-        <motion.h2
-          viewport={{ once: true }}
-          variants={fromLeft}
-          initial="initial"
-          whileInView="whileInView"
-          className="font-[100] text-5xl text-stone-200 container mx-auto"
-        >
-          ABOUT ME
-        </motion.h2>
-        <div className="flex items-center gap-16 container mx-auto">
+    <section className="overflow-hidden asteroid">
+      <SectionTitle title="ABOUT ME" />
+      <div className="xl:p-16 flex gap-8">
+        <div className="flex flex-col xl:flex-row items-center gap-16 py-8 container mx-auto">
           <motion.img
             viewport={{ once: true }}
             variants={fromLeft}
@@ -58,8 +39,7 @@ const AboutMe = () => {
             whileInView="whileInView"
             src={ulas}
             alt="Barış Ulaş Coşkun"
-            // className="w-full h-full"
-            className="aspect-[1152/1352] w-[400px]"
+            className="aspect-[1152/1352] w-[400px] mb-8"
           />
 
           <motion.div
@@ -67,9 +47,9 @@ const AboutMe = () => {
             variants={fromRight}
             initial={{ x: 200, opacity: 0 }}
             whileInView="whileInView"
-            className="flex flex-col gap-4 border border-gray-300 p-8"
+            className="flex flex-col gap-4 border border-gray-300 p-4 xl:p-8"
           >
-            <motion.h3 className="text-4xl text-stone-200">
+            <motion.h3 className=" xl:text-4xl text-stone-200">
               Web developer & Engineer
             </motion.h3>
             <motion.p className="text-stone-700">

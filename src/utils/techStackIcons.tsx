@@ -27,7 +27,7 @@ const techStackIcons = [
   <SiExpress className="text-6xl" title="Express.js" />,
   <SiMongodb className="text-6xl" title="MongoDB" />,
   <SiPostgresql className="text-6xl" title="PostgreSQL" />,
-  <SiGit className="text-6xl" title="MongoDB" />,
+  <SiGit className="text-6xl" title="Git" />,
   <SiPostman className="text-6xl" title="Postman" />,
   <SiTailwindcss className="text-6xl" title="Tailwind" />,
 ];

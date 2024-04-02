@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: BMSpace;
+  src: url(/BMSPA___.TTF);
+}
+
+@font-face {
+  font-family: Astronaut;
+  src: url(/ASTRONAU.TTF);
+}
+
+@layer components {
+  .font-bmspace {
+    font-family: BMSpace, sans-serif;
+  }
+
+  .font-astronaut {
+    font-family: Astronaut, sans-serif;
+  }
+}
+
 :root {
   --body-background: #151a20;
 
@@ -14,10 +34,17 @@
 }
 
 * {
-  font-family: 'DM Sans', sans-serif;
+  font-family: BMSpace, sans-serif;
 }
 
 body {
   background-color: var(--body-background);
   color: var(--white);
+}
+
+.asteroid {
+  position: relative;
+  background-color: var(--body-background);
+  z-index: 14;
+  padding-top: 64px;
 }
