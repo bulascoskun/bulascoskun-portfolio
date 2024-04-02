@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import './Parallax.scss';
 import ShapeDivider from './ShapeDivider';
 import rocket from '../../assets/images/other/rocket.png';
+import planets from '../../assets/images/other/planets.png';
 
 const links = ['About Me', 'Projects', 'Contact'];
 
@@ -49,10 +50,12 @@ const Parallax = () => {
 
   return (
     <section className="parallax" ref={ref}>
-      <motion.div
-        className="planets hidden md:block"
-        style={{ y: yPlanets }}
-      ></motion.div>
+      <motion.img
+        src={planets}
+        style={{ x: '-50%', y: yPlanets }}
+        className="hidden md:block absolute h-[190px] aspect-[289/180]  z-20 object-contain
+        top-1/2 left-1/2"
+      />
 
       <motion.img
         className="select-none absolute z-[20] bottom-0 sm:w-[500px] sm:right-0"

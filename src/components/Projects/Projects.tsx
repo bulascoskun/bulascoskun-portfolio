@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section ref={ref} className="asteroid">
       {/* TITLE */}
-      <div className="flex flex-row items-center justify-center w-full sticky top-[1rem] overflow-hidden z-10">
+      <div className="flex flex-row items-center justify-center w-full sticky top-[1rem] overflow-hidden z-[18]">
         <h2
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-stone-200 text-center font-astronaut tracking-wider whitespace-nowrap px-8 bg-[var(--body-background)]
     z-10 rounded-lg"
@@ -35,7 +35,7 @@ const Projects = () => {
       </div>
 
       {/* PROJECTS */}
-      <div className="relative flex flex-col gap-80 py-40">
+      <div className="relative flex flex-col gap-20 xl:gap-80 py-12 xl:pt-24 xl:pb-52 z-[17]">
         {projectsList.map((project, index) => {
           return (
             <SingleProject

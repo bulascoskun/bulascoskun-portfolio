@@ -1,8 +1,11 @@
-import './StarsBackground.scss';
+import stars from '../../assets/images/other/stars-2.png';
 
 const StarsBackground = () => {
   return (
-    <div className="stars2 fixed top-0 left-0 h-full w-full pointer-events-none z-10"></div>
+    <img
+      src={stars}
+      className="fixed top-0 left-0 h-full w-full pointer-events-none z-10 object-cover"
+    />
   );
 };
 export default StarsBackground;

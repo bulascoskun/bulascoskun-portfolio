@@ -5,9 +5,9 @@ import './Divider2.scss';
 
 const Divider2 = () => {
   return (
-    <section className="divider-container relative bg-white overflow-hidden h-[500px]">
+    <section className="divider-container relative bg-white h-[500px]">
       {/* TOP DIVIDER */}
-      <div className="custom-shape-divider-top-1711911017 z-[15]">
+      <div className="custom-shape-divider-top-1711911017 z-[14]">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Divider2 = () => {
       />
 
       {/* BOTTOM DIVIDER */}
-      <div className="custom-shape-divider-bottom-1711911221 z-[15]">
+      <div className="custom-shape-divider-bottom-1711911221">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

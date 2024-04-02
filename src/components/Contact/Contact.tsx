@@ -40,12 +40,12 @@ const Contact = () => {
     <section className="overflow-hidden asteroid">
       <SectionTitle title="CONTACT" />
 
-      <div className="flex justify-center gap-8 p-8">
+      <div className="flex flex-col lg:flex-row justify-center gap-8 md:p-8">
         {/* LEFT */}
-        <div className="p-8 flex-1 flex flex-col gap-12">
+        <div className="mt-8 md:mt-0 p-4 sm:p-8 flex-1 flex flex-col gap-4 sm:gap-12">
           <ReactTyped
             cursorChar=""
-            className="text-4xl tracking-wider underline underline-offset-[20px] h-10"
+            className="text-xl sm:text-2xl md:text-4xl text-center lg:text-start tracking-wider underline underline-offset-[20px] h-10 whitespace-nowrap"
             strings={["Let's work together!"]}
             startWhenVisible
             typeSpeed={50} // It takes 1 seconds
@@ -53,10 +53,11 @@ const Contact = () => {
           />
 
           <motion.ul
+            viewport={{ once: true }}
             variants={variants}
             initial="initial"
             whileInView="whileInView"
-            className="flex flex-col gap-8 pl-8"
+            className="flex flex-col gap-8 p-4 mx-auto lg:mx-0 lg:pl-8"
           >
             {contactRow.map(({ name, value, href }, i) => {
               return (
@@ -67,7 +68,7 @@ const Contact = () => {
                 >
                   <motion.h3
                     variants={variants}
-                    className="tracking-wider text-2xl"
+                    className="tracking-wider text-lg sm:text-xl md:text-2xl"
                   >
                     {name}
                   </motion.h3>

@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="z-[14] sticky top-[95%] px-8">
+      <div className="z-[14] sticky top-[95%] px-4 sm:px-8 text-[10px] sm:text-xs">
         © 2024 Baris Ulas Coskun. All rights reserved.
       </div>
     </section>

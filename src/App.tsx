@@ -17,9 +17,9 @@ const App = () => {
       <TechStack />
       <Divider />
       <Projects />
-      {/* <Divider2 /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Divider2 />
+      <Contact />
+      <Footer />
     </main>
   );
 };

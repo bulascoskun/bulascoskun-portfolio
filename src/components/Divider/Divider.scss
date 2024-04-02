@@ -5,6 +5,7 @@
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  z-index: 12;
 }
 
 .custom-shape-divider-top-1711818163 svg {
@@ -16,7 +17,8 @@
 
 .custom-shape-divider-bottom-1711818148 {
   position: absolute;
-  bottom: -2px;
+  z-index: 12;
+  bottom: -3px;
   left: 0;
   width: 100%;
   overflow: hidden;

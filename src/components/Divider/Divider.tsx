@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 const Divider = () => {
   return (
-    <section className="divider-container relative bg-white overflow-hidden h-[500px]">
+    <section className="divider-container relative bg-white h-[500px]">
       {/* TOP DIVIDER */}
-      <div className="custom-shape-divider-top-1711818163 z-[15]">
+      <div className="custom-shape-divider-top-1711818163">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const Divider = () => {
       {/* ASTRONAUT */}
       <motion.img
         viewport={{ once: true }}
-        initial={{ y: -50, rotate: -30, x: 0 }}
+        initial={{ y: -50, rotate: -30, x: '-50%' }}
         whileInView={{
           y: -200,
           rotate: -1300,
@@ -47,9 +47,8 @@ const Divider = () => {
         src={astronaut}
         className="w-40 absolute right-0 top-1/2 z-10 select-none"
       />
-
       {/* BOTTOM DIVIDER */}
-      <div className="custom-shape-divider-bottom-1711818148 z-[15]">
+      <div className="custom-shape-divider-bottom-1711818148">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
