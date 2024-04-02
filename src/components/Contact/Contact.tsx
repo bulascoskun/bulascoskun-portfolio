@@ -68,7 +68,7 @@ const Contact = () => {
                 >
                   <motion.h3
                     variants={variants}
-                    className="tracking-wider text-lg sm:text-xl md:text-2xl"
+                    className="tracking-wider text-lg sm:text-xl md:text-2xl text-gray-200"
                   >
                     {name}
                   </motion.h3>
@@ -76,7 +76,7 @@ const Contact = () => {
                     variants={variants}
                     href={href}
                     target="_blank"
-                    className="font-mono pl-4 w-min"
+                    className="font-mono pl-4 w-min text-gray-300 hover:text-gray-100"
                   >
                     {value}
                   </motion.a>

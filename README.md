@@ -1,6 +1,6 @@
 **NOTLAR**
 1- Emrecanın çılgın projesi (Roket)
+2- about me yazısı + foto güncellemek
 
-2- form'u halletmek required dahil
-4- projects'in sonunda image rotate olunca z-index'te problem oluyor
-5- about me yazısı + foto güncellemek
+3- form'u halletmek required dahil
+4- hero'daki navigasyon
