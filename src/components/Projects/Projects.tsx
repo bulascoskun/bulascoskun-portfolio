@@ -17,7 +17,7 @@ const Projects = () => {
   });
 
   return (
-    <section ref={ref} className="asteroid">
+    <section ref={ref} className="asteroid" id="projects">
       {/* TITLE */}
       <div className="flex flex-row items-center justify-center w-full sticky top-[1rem] overflow-hidden z-[18]">
         <h2

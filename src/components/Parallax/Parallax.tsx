@@ -6,7 +6,11 @@ import ShapeDivider from './ShapeDivider';
 import rocket from '../../assets/images/other/rocket.png';
 import planets from '../../assets/images/other/planets.png';
 
-const links = ['About Me', 'Projects', 'Contact'];
+const links = [
+  { title: 'About Me', href: '#aboutMe' },
+  { title: 'Projects', href: '#projects' },
+  { title: 'Contact', href: '#contact' },
+];
 
 const socials = [
   {
@@ -90,10 +94,10 @@ const Parallax = () => {
             return (
               <motion.li
                 variants={textVariants}
-                key={link}
+                key={link.title}
                 className="hover:text-gray-200 whitespace-nowrap"
               >
-                {link}
+                <a href={link.href}>{link.title}</a>
               </motion.li>
             );
           })}

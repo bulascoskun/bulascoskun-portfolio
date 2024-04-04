@@ -28,7 +28,7 @@ const fromRight = {
 
 const AboutMe = () => {
   return (
-    <section className="overflow-hidden asteroid">
+    <section className="overflow-hidden asteroid" id="aboutMe">
       <SectionTitle title="ABOUT ME" />
       <div className="xl:p-16 flex gap-8">
         <div className="flex flex-col xl:flex-row items-center gap-16 py-8 container mx-auto">

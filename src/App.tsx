@@ -1,3 +1,5 @@
+import { useModal } from './components/Modal/ModalContext';
+
 import AboutMe from './components/AboutMe';
 import Parallax from './components/Parallax/Parallax';
 import Divider from './components/Divider/Divider';
@@ -7,10 +9,14 @@ import Projects from './components/Projects/Projects';
 import Divider2 from './components/Divider/Divider2';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Divider/Footer';
+import PhotoModal from './components/Modal/PhotoModal';
 
 const App = () => {
+  const { isModalOpen } = useModal();
+
   return (
     <main>
+      {isModalOpen && <PhotoModal />}
       <StarsBackground />
       <Parallax />
       <AboutMe />

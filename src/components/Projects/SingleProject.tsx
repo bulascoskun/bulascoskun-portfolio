@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ResponsiveImages from './ResponsiveImages';
+import { useModal } from '../Modal/ModalContext';
 
 type SingleProject = {
   title: string;
@@ -31,6 +32,8 @@ const SingleProject = ({
   github,
   orientation,
 }: SingleProject) => {
+  const { openModal } = useModal();
+
   if (orientation === 'left')
     return (
       <div className="flex flex-col xl:flex-row items-center gap-8 container mx-auto">
@@ -61,7 +64,10 @@ const SingleProject = ({
               },
             }}
             src={img[0]}
-            className="absolute left-0 max-w-[80%] w-[600px] aspect-[600/296]"
+            onClick={() => {
+              openModal(img[0]);
+            }}
+            className="absolute left-0 max-w-[80%] w-[600px] aspect-[600/296] cursor-pointer"
           />
           <motion.img
             initial={{
@@ -76,8 +82,11 @@ const SingleProject = ({
               },
             }}
             src={img[1]}
+            onClick={() => {
+              openModal(img[1]);
+            }}
             className="absolute -translate-y-[75%] right-0 max-w-[80%] shadow-md shadow-stone-800 w-[600px] 
-            aspect-[600/296] z-10"
+            aspect-[600/296] z-10 cursor-pointer"
           />
         </motion.div>
 
@@ -181,7 +190,7 @@ const SingleProject = ({
               staggerChildren: 0.5,
             },
           }}
-          className="hidden xl:block w-full xl:w-1/2 relative"
+          className="hidden xl:block w-full xl:w-1/2 relative cursor-pointer"
         >
           <motion.img
             initial={{
@@ -196,7 +205,10 @@ const SingleProject = ({
               },
             }}
             src={img[0]}
-            className="absolute right-0 max-w-[80%] w-[600px] aspect-[600/296]"
+            onClick={() => {
+              openModal(img[0]);
+            }}
+            className="absolute right-0 max-w-[80%] w-[600px] aspect-[600/296] cursor-pointer"
           />
           <motion.img
             initial={{
@@ -211,6 +223,9 @@ const SingleProject = ({
               },
             }}
             src={img[1]}
+            onClick={() => {
+              openModal(img[1]);
+            }}
             className="absolute -translate-y-[75%] left-0 max-w-[80%] shadow-md shadow-stone-800 w-[600px] aspect-[600/296]"
           />
         </motion.div>

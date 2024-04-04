@@ -7,21 +7,23 @@ const ContactForm = () => {
   const formRef = useRef<any>();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [isPending, setIsPending] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    setIsPending(true);
     emailjs
       .sendForm('service_rlfpm9k', 'template_gontlv4', formRef.current, {
         publicKey: 'lhqOB0n_08kIayV5m',
       })
       .then(
         () => {
+          setIsPending(false);
           setSuccess(true);
           setError(false);
         },
-        (error) => {
-          console.log(error.text);
+        (_) => {
+          setIsPending(false);
           setError(true);
           setSuccess(false);
         }
@@ -66,8 +68,9 @@ const ContactForm = () => {
         whileHover={{ y: -5 }}
         type="submit"
         className="bg-[#191552] py-2 px-16 ml-auto"
+        disabled={isPending}
       >
-        Send
+        {!isPending ? 'Send' : 'Pending'}
       </motion.button>
       <div className="h-10 flex justify-start items-center">
         {error && (
