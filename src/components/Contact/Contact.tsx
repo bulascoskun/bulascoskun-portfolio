@@ -48,7 +48,7 @@ const Contact = () => {
             className="text-xl sm:text-2xl md:text-4xl text-center lg:text-start tracking-wider underline underline-offset-[20px] h-10 whitespace-nowrap"
             strings={["Let's work together!"]}
             startWhenVisible
-            typeSpeed={50} // It takes 1 seconds
+            typeSpeed={50}
             startDelay={0}
           />
 

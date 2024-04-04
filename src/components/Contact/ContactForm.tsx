@@ -1,8 +1,36 @@
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
+import { ReactTyped } from 'react-typed';
 
 const ContactForm = () => {
+  const formRef = useRef<any>();
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_rlfpm9k', 'template_gontlv4', formRef.current, {
+        publicKey: 'lhqOB0n_08kIayV5m',
+      })
+      .then(
+        () => {
+          setSuccess(true);
+          setError(false);
+        },
+        (error) => {
+          console.log(error.text);
+          setError(true);
+          setSuccess(false);
+        }
+      );
+  };
   return (
     <motion.form
+      onSubmit={sendEmail}
+      ref={formRef}
       viewport={{ once: true }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -16,6 +44,7 @@ const ContactForm = () => {
         name="name"
         id="name"
         placeholder="Name"
+        required
       />
       <input
         className="bg-[var(--body-color)] border border-white font-mono px-4 py-2 placeholder:font-bmspace"
@@ -23,12 +52,14 @@ const ContactForm = () => {
         name="email"
         id="email"
         placeholder="Email"
+        required
       />
       <textarea
         className="bg-[var(--body-color)] border border-white h-full min-h-60 font-mono px-4 py-2 resize-none placeholder:font-bmspace"
         name="message"
         id="message"
         placeholder="Message"
+        required
       />
       <motion.button
         initial={{ y: 0 }}
@@ -38,6 +69,29 @@ const ContactForm = () => {
       >
         Send
       </motion.button>
+      <div className="h-10 flex justify-start items-center">
+        {error && (
+          <ReactTyped
+            cursorChar=""
+            className="whitespace-nowrap"
+            strings={['There was an error :(']}
+            startWhenVisible
+            typeSpeed={50}
+            startDelay={0}
+          />
+        )}
+
+        {success && (
+          <ReactTyped
+            cursorChar=""
+            className="whitespace-nowrap"
+            strings={['Success!']}
+            startWhenVisible
+            typeSpeed={50}
+            startDelay={0}
+          />
+        )}
+      </div>
     </motion.form>
   );
 };

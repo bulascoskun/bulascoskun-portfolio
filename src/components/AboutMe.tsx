@@ -49,35 +49,17 @@ const AboutMe = () => {
             whileInView="whileInView"
             className="flex flex-col gap-4 border border-gray-300 p-4 xl:p-8"
           >
-            <motion.h3 className=" xl:text-4xl text-stone-200">
+            <motion.h3
+              variants={fromRight}
+              className=" xl:text-4xl text-stone-200"
+            >
               Web developer & Engineer
             </motion.h3>
-            <motion.p className="text-stone-700">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              repudiandae nihil deserunt quo autem. Voluptatibus eligendi
-              repudiandae rem commodi. Quaerat accusamus sit quia exercitationem
-              tenetur, nostrum consectetur hic obcaecati ad facere dolor, fugiat
-              aperiam autem fuga totam debitis officiis! Excepturi porro eius
-              tenetur est quibusdam error minima nesciunt, adipisci facilis
-              corrupti soluta saepe voluptas ab nemo velit debitis quaerat
-              impedit accusamus sunt. Vel, ab officia veritatis adipisci autem
-              repellat error id cumque ullam eaque nobis tempore quae magni
-              dolores quas excepturi, corporis in hic voluptatibus iusto dicta.
-              Saepe soluta autem odit culpa repellendus ratione libero
-              perferendis, similique ullam provident adipisci optio ducimus quis
-              illo doloribus aspernatur obcaecati iure, ut ad. Iste quisquam
-              inventore illo illum dolorum delectus voluptates labore eos
-              tenetur quae nemo voluptate, minus quasi molestiae nobis
-              accusantium est rem asperiores dolore perspiciatis, ducimus
-              veritatis quo amet. Sapiente ducimus id tempora voluptate magnam
-              repudiandae eos, corrupti aliquid praesentium, dignissimos iure
-              ipsam natus sed voluptatum aliquam cum deleniti saepe quis. Nobis
-              quos, assumenda quidem, nesciunt dolore illo, cupiditate
-              reiciendis hic temporibus non cum distinctio maiores sint
-              praesentium. Nisi quidem earum quisquam maxime cupiditate expedita
-              facilis inventore voluptatibus at rem ducimus accusantium
-              laudantium doloremque, nulla illum vitae praesentium nostrum
-              repudiandae sequi?
+            <motion.p variants={fromRight} className="text-stone-700">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum
+              officiis cumque fuga laborum voluptate similique autem cum dolorum
+              sapiente, tempore a iure, iusto voluptas repellat nihil
+              reprehenderit aperiam magni accusantium!
             </motion.p>
           </motion.div>
         </div>

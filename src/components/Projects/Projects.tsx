@@ -35,7 +35,7 @@ const Projects = () => {
       </div>
 
       {/* PROJECTS */}
-      <div className="relative flex flex-col gap-20 xl:gap-80 py-12 xl:pt-24 xl:pb-52 z-[17]">
+      <div className="relative flex flex-col gap-20 xl:gap-80 py-12 xl:pt-36 xl:pb-52 z-[17]">
         {projectsList.map((project, index) => {
           return (
             <SingleProject
