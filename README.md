@@ -1,2 +1,3 @@
 **NOTLAR**
-2- about me yazısı + foto güncellemek
+
+1- Foto güncellemek

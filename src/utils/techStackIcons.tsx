@@ -33,3 +33,15 @@ const techStackIcons = [
 ];
 
 export default techStackIcons;
+
+export const techStackNames = [
+  'React',
+  'Node.js',
+  'TypeScript',
+  'Redux',
+  'Next.js',
+  'Express.js',
+  'MongoDB',
+  'PostgreSQL',
+  'Tailwind',
+];

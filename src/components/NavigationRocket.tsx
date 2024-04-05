@@ -7,18 +7,14 @@ const NavigationRocket = () => {
 
   useEffect(() => {
     function handleScroll() {
-      // Window'un scroll pozisyonunu al
       const scrollPosition = window.scrollY;
-      // Eğer scroll pozisyonu 100 dvh geçtiyse ve belirli bir şey belirsin istiyorsak
-      if (scrollPosition > window.innerHeight * 0.9) {
+      if (scrollPosition > window.innerHeight * 0.4) {
         setShowItem(true);
       } else {
         setShowItem(false);
       }
     }
-    // Scroll olayını dinleyen event listener ekleyelim
     window.addEventListener('scroll', handleScroll);
-    // Clean-up: Component kaldırıldığında event listener'ı kaldır
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -27,7 +23,7 @@ const NavigationRocket = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // Animasyonlu kaydırma için
+      behavior: 'smooth',
     });
   };
 
@@ -38,11 +34,11 @@ const NavigationRocket = () => {
           <motion.img
             initial={{ y: 200 }}
             animate={{ y: -5 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
             exit={{
               y: '-130dvh',
               transition: {
-                duration: 0.7,
+                duration: 0.4,
               },
             }}
             src={rocket}
