@@ -18,11 +18,13 @@ const ContactForm = () => {
       })
       .then(
         () => {
+          // success
           setIsPending(false);
           setSuccess(true);
           setError(false);
         },
         (_) => {
+          // error
           setIsPending(false);
           setError(true);
           setSuccess(false);
@@ -50,7 +52,7 @@ const ContactForm = () => {
       />
       <input
         className="bg-[var(--body-color)] border border-white font-mono px-4 py-2 placeholder:font-bmspace"
-        type="text"
+        type="email"
         name="email"
         id="email"
         placeholder="Email"

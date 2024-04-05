@@ -38,15 +38,15 @@ const Divider = () => {
         whileInView={{
           y: -200,
           rotate: -1300,
-          x: '-110dvw',
+          x: '-120dvw',
           transition: {
             duration: 6,
           },
         }}
-        exit={{ opacity: 0 }}
         src={astronaut}
         className="w-40 absolute right-0 top-1/2 z-10 select-none"
       />
+
       {/* BOTTOM DIVIDER */}
       <div className="custom-shape-divider-bottom-1711818148">
         <svg
