@@ -2,7 +2,9 @@
 
 ## Overview
 
-This app was website was created for...
+This portfolio website was created to showcase my skills and projects. The main technologies I utilized include React, TypeScript, Tailwind, and Framer Motion.
+
+This project aims to provide users with comprehensive information about myself and my work, demonstrating my technical knowledge and experience. Furthermore, it is designed to offer an advanced and aesthetically pleasing website experience.
 
 **LIVE LINK** : https://bulascoskun.vercel.app/
 
