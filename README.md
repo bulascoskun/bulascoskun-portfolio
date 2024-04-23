@@ -6,7 +6,7 @@ This portfolio website was created to showcase my skills and projects. The main 
 
 This project aims to provide users with comprehensive information about myself and my work, demonstrating my technical knowledge and experience. Furthermore, it is designed to offer an advanced and aesthetically pleasing website experience.
 
-**LIVE LINK** : https://bulascoskun.vercel.app/
+**LIVE LINK** : https://bulascoskun.com/
 
 ## Features
 
